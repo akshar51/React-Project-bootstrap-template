@@ -15,18 +15,6 @@ Entry point of the React application.
   - Main `App` component.
   - Bootstrap CSS.
 
-### Code Summary:
-```jsx
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
 
 
 ## 📄 `App.jsx`
@@ -90,3 +78,18 @@ Defines the main layout and structure of the e-commerce homepage.
 - Static data used for product listing and cart.  
 - UI is modular and can be converted into reusable React components.  
 - No use of React state or dynamic updates yet.
+
+
+### Code Summary:
+```jsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+
