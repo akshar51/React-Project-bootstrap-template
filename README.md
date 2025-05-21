@@ -1,12 +1,90 @@
-# React + Vite
+# React E-Commerce Application – File Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📄 `main.jsx`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Purpose:
+Entry point of the React application.
 
-## Expanding the ESLint configuration
+### Description:
+- Uses React 18's `createRoot` to render the application.
+- Imports:
+  - `StrictMode` from React for development checks.
+  - `createRoot` from React DOM.
+  - Main `App` component.
+  - Bootstrap CSS.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Code Summary:
+```jsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+## 📄 App.jsx
+
+### Purpose:
+Defines the main layout and structure of the e-commerce homepage.
+
+---
+
+### Key Sections:
+
+- **SVG Icons**  
+  Defines a library of reusable SVG symbols (user, heart, cart, search, etc.).
+
+- **Preloader**  
+  Empty placeholder for a loading animation (likely styled via CSS).
+
+- **Offcanvas Panels**  
+  - Cart panel with static items and checkout button.  
+  - Search panel with an input field and submit button.
+
+- **Header**  
+  - Logo section with an image.  
+  - Search bar with category selector.  
+  - Contact support information.  
+  - Icons for user profile, wishlist, and cart (responsive design with offcanvas toggles).
+
+- **Navigation Menu**  
+  - Offcanvas-based Bootstrap navbar.  
+  - Dropdown menu for extra pages (About, Shop, Blog, etc.).
+
+- **Hero Banners**  
+  - Swiper carousel with promotional content and product images.
+
+- **Category Carousel**  
+  - Swiper-based slider with category thumbnails (e.g., Fruits, Breads, Drinks).
+
+- **Newly Arrived Brands**  
+  - Horizontal swiper of product cards (images + titles).
+
+- **Trending Products Section**  
+  - Bootstrap tabs (All, Fruits & Veges, Juices).  
+  - Grid layout of product cards with:  
+    - Image, title, rating, price  
+    - Quantity selector  
+    - Add to Cart link  
+    - Wishlist button
+
+---
+
+### Technologies Used:
+- React  
+- Bootstrap 5  
+- Swiper.js  
+- SVG Sprites for icons  
+- Responsive Design
+
+---
+
+### Notes:
+- Static data used for product listing and cart.  
+- UI is modular and can be converted into reusable React components.  
+- No use of React state or dynamic updates yet.
