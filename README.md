@@ -27,7 +27,9 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>
 );
-## 📄 App.jsx
+
+
+## 📄 `App.jsx`
 
 ### Purpose:
 Defines the main layout and structure of the e-commerce homepage.
